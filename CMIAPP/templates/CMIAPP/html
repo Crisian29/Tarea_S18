@@ -1,0 +1,31 @@
+<!-- CMIAPP/templates/CMIAPP/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Registros</title>
+</head>
+<body>
+    <h1>Lista de Registros</h1>
+    
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <!-- Agrega más columnas según tus modelos -->
+        </tr>
+
+        {% for empleado in empleados %}
+        <tr>
+            <td>{{ empleado.id }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.apellido }}</td>
+            <!-- Agrega más columnas según tus modelos -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
